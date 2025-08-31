@@ -145,6 +145,67 @@ header{
   width:100%;
   object-fit: cover;
 }
+.features .fe-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.features .fe-box div{
+  width:200px;
+}
+.features .fe-box img{
+  width:50px;
+  margin: 3rem;
+}
+
+.jobs .job-id{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.jobs .job-id li{
+  padding: 20px 40px;
+  cursor: pointer;
+  color: #000;
+}
+
+.jobs .job-id li.active{
+  background-color: #51a995;
+  color: #fff;
+}
+
+.jobs .jList{
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border: 1px solid #ccc;
+  align-items: center;
+  justify-items: start;
+  cursor: pointer;
+  color: #000;
+  padding: 2rem 2rem;
+}
+
+.jobs .jList.delete{
+  display: none;
+}
+
+.jobs .jList h3{
+  padding-bottom: 0;
+}
+
+.jobs .jList:hover{
+  background-color: #ecf1ee;
+}
+
+.jobs .jList img{
+  width:40px;
+}
 
 @media (max-width:699px){
   #menu {
@@ -193,5 +254,37 @@ header{
  }
  .h-right{
   display:none;
+ }
+ .features .fe-box div{
+  width:40%;
+  margin:1rem;
+ }
+ .jobs .job-id {
+  position: relative;
+  width: 100%;
+  overflow-x:scroll;
+  -ms-overflow-style:none;
+  scrollbar-width: none;
+ }
+ .jobs .job-id li{
+  padding: 20px 30px;
+  text-wrap: nowrap;
+ }
+ .jobs-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+ }
+
+ .jobs .jList {
+  width: 48%;
+  margin-top: 1rem;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 15px;
+  padding: 2rem 1rem;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
  }
 }
